@@ -1,0 +1,248 @@
+/* ========== BASIS ========== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section, header, footer, nav {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ========== HEADER ========== */
+header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+#logo {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+nav ul li a:hover {
+  color: #0082c3;
+}
+
+#site-search {
+  padding: 6px 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+/* ========== PRODUCT LAYOUT (COLUMN) ========== */
+main {
+  padding: 20px;
+}
+
+.item-image-parent {
+  margin-bottom: 30px;
+}
+
+.item-list-vertical {
+  margin-bottom: 20px;
+}
+
+.thumb-box {
+  margin-bottom: 10px;
+}
+
+.thumb-box img {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  background: #f5f5f5;
+}
+
+.item-image-main img {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+/* ========== PRODUCT INFO ========== */
+h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+#price {
+  font-weight: bold;
+  color: #0082c3;
+  font-size: 20px;
+}
+
+.select-items {
+  margin-top: 20px;
+}
+
+.change-color h2,
+.change-size label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* ========== DESCRIPTION ========== */
+.description {
+  margin-top: 20px;
+}
+
+.description h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.description ul {
+  padding-left: 20px;
+}
+
+.description li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+/* ========== BUTTONS (DECATHLON STYLE) ========== */
+.round-black-btn {
+  background: #0082c3;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.round-black-btn:hover {
+  background: #005f99;
+}
+
+/* ========== TABS / EXTRA INFO ========== */
+.tab-pane {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f5f5f5;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  margin-top: 40px;
+  background: #f5f5f5;
+  padding: 30px 20px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.footer-menu a:hover {
+  color: #0082c3;
+}
+
+.footer-info,
+.footer-social,
+.footer-newsletter {
+  margin-bottom: 25px;
+}
+
+.footer-info h3,
+.footer-social h3,
+.footer-newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+/* ========== SOCIAL BUTTONS ========== */
+.social-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  background: #0082c3;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.social-buttons a:hover {
+  background: #005f99;
+}
+
+/* ========== NEWSLETTER ========== */
+.footer-newsletter input {
+  padding: 8px;
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+  background: #0082c3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.footer-newsletter button:hover {
+  background: #005f99;
+}
