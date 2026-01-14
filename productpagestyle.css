@@ -6,16 +6,19 @@ body {
   background: #ffffff;
 }
 
+
 img {
   max-width: 100%;
   display: block;
 }
+
 
 section, header, footer, nav {
   display: block;
   width: 100%;
   box-sizing: border-box;
 }
+
 
 /* ========== HEADER ========== */
 header {
@@ -24,10 +27,12 @@ header {
   background: #ffffff;
 }
 
+
 #logo {
   max-width: 160px;
   margin-bottom: 15px;
 }
+
 
 nav ul {
   list-style: none;
@@ -35,20 +40,24 @@ nav ul {
   margin: 0;
 }
 
+
 nav ul li {
   display: inline-block;
   margin-right: 15px;
   font-size: 14px;
 }
 
+
 nav ul li a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
+
 nav ul li a:hover {
   color: #0082c3;
 }
+
 
 #site-search {
   padding: 6px 10px;
@@ -56,22 +65,44 @@ nav ul li a:hover {
   border-radius: 4px;
 }
 
+
+
+/* Desktop nav */
+.nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
 /* ========== PRODUCT LAYOUT (COLUMN) ========== */
 main {
   padding: 20px;
 }
 
+
 .item-image-parent {
   margin-bottom: 30px;
 }
+
 
 .item-list-vertical {
   margin-bottom: 20px;
 }
 
+
 .thumb-box {
   margin-bottom: 10px;
 }
+
 
 .thumb-box img {
   border: 1px solid #dddddd;
@@ -79,11 +110,31 @@ main {
   background: #f5f5f5;
 }
 
+
 .item-image-main img {
   border: 1px solid #dddddd;
   padding: 10px;
-  background: #f5f5f5;
+  background: #f5f5f5; 
 }
+
+.media-gallerij {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.media-gallerij li {
+  width: 20%; /* 5 op een rij */
+}
+
+.media-gallerij img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
 
 /* ========== PRODUCT INFO ========== */
 h1 {
@@ -91,15 +142,18 @@ h1 {
   margin-bottom: 10px;
 }
 
+
 #price {
   font-weight: bold;
   color: #0082c3;
   font-size: 20px;
 }
 
+
 .select-items {
   margin-top: 20px;
 }
+
 
 .change-color h2,
 .change-size label {
@@ -107,6 +161,7 @@ h1 {
   margin-bottom: 10px;
   display: block;
 }
+
 
 select {
   padding: 8px;
@@ -116,25 +171,30 @@ select {
   max-width: 200px;
 }
 
+
 /* ========== DESCRIPTION ========== */
 .description {
   margin-top: 20px;
 }
+
 
 .description h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
+
 .description ul {
   padding-left: 20px;
 }
+
 
 .description li {
   margin-bottom: 6px;
   font-size: 14px;
   color: #6f6f6f;
 }
+
 
 /* ========== BUTTONS (DECATHLON STYLE) ========== */
 .round-black-btn {
@@ -149,9 +209,11 @@ select {
   margin-top: 20px;
 }
 
+
 .round-black-btn:hover {
   background: #005f99;
 }
+
 
 /* ========== TABS / EXTRA INFO ========== */
 .tab-pane {
@@ -163,6 +225,7 @@ select {
   color: #6f6f6f;
 }
 
+
 /* ========== FOOTER ========== */
 footer {
   margin-top: 40px;
@@ -170,15 +233,18 @@ footer {
   padding: 30px 20px;
 }
 
+
 .footer-menu ul {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
 }
 
+
 .footer-menu li {
   margin-bottom: 8px;
 }
+
 
 .footer-menu a {
   text-decoration: none;
@@ -186,15 +252,18 @@ footer {
   font-size: 14px;
 }
 
+
 .footer-menu a:hover {
   color: #0082c3;
 }
+
 
 .footer-info,
 .footer-social,
 .footer-newsletter {
   margin-bottom: 25px;
 }
+
 
 .footer-info h3,
 .footer-social h3,
@@ -203,11 +272,13 @@ footer {
   margin-bottom: 10px;
 }
 
+
 .footer-info p {
   margin: 4px 0;
   font-size: 14px;
   color: #6f6f6f;
 }
+
 
 /* ========== SOCIAL BUTTONS ========== */
 .social-buttons a {
@@ -220,9 +291,11 @@ footer {
   text-decoration: none;
 }
 
+
 .social-buttons a:hover {
   background: #005f99;
 }
+
 
 /* ========== NEWSLETTER ========== */
 .footer-newsletter input {
@@ -234,6 +307,7 @@ footer {
   margin-bottom: 10px;
 }
 
+
 .footer-newsletter button {
   background: #0082c3;
   color: white;
@@ -243,6 +317,53 @@ footer {
   font-weight: bold;
 }
 
+
 .footer-newsletter button:hover {
   background: #005f99;
+  
+}
+
+/* Responsive */
+@media (min-width: 390px) {
+  nav {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  nav button {
+    width: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  section ul li img {
+    width: 70%;
+  }
+}
+
+/* hamburger */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 100%;
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .nav.show {
+    display: block;
+  }
 }
