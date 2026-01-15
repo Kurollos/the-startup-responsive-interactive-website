@@ -193,7 +193,19 @@ main {
     border-color: #007BFF;
 }
 
+/* ========== Move Animation ========== */
+.media-gallerij{
+   animation-name: move;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
 
+        @keyframes move {
+            from {transform: translateX(0);}
+            to {transform: translateX(300px);}
+        }
+   
 /* ========== PRODUCT INFO ========== */
 h1 {
   font-size: 26px;
