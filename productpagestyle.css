@@ -135,6 +135,64 @@ main {
   display: block;
 }
 
+.item-image-main {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin: 0 5px;
+    transition: border 0.3s;
+}
+
+.thumbnail.active {
+    border-color: #007BFF;
+}
+
+.media-gallery-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.media-gallery-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent; /* standaard geen rand */
+    margin: 0 5px;
+    transition: border 0.3s;
+}
+
+/* Actieve thumbnail krijgt een blauwe rand */
+.thumbnail.active {
+    border-color: #007BFF;
+}
+
 
 /* ========== PRODUCT INFO ========== */
 h1 {
