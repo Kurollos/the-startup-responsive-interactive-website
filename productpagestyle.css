@@ -135,11 +135,28 @@ main {
   display: block;
 }
 
+/* Container voor de grote afbeelding */
 .item-image-main {
     width: 50%;
-    height: auto;
+    height: 400px; /* vaste hoogte voorkomt layout shift */
     border-radius: 8px;
     margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.item-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* vult de container netjes zonder stretch */
+    transition: opacity 0.3s ease; /* fade effect */
+    display: block;
+    pointer-events: none; /* voorkomt focus scroll */
+}
+
+/* Fade class voor JS */
+.item-image-main.fade-out img {
+    opacity: 0;
 }
 
 .thumbnail {
@@ -191,6 +208,11 @@ main {
 /* Actieve thumbnail krijgt een blauwe rand */
 .thumbnail.active {
     border-color: #007BFF;
+}
+
+/* Thumbnail focus uitschakelen */
+.thumbnail:focus {
+    outline: none;
 }
 
 /* ========== Move Animation ========== */

@@ -65,3 +65,23 @@ document.addEventListener('DOMContentLoaded', function() {
     updateGallery();
 
 });
+
+function updateGallery() {
+    // fade-out effect
+    mainImage.classList.add('fade-out');
+
+    setTimeout(() => {
+        mainImage.src = images[currentIndex]; // grote afbeelding vervangen
+
+        // fade-in
+        mainImage.classList.remove('fade-out');
+
+        // actieve thumbnail bijwerken
+        thumbnails.forEach((thumb, index) => {
+            thumb.classList.toggle('active', index === currentIndex);
+        });
+
+        // optioneel: voorkom scroll jump bij thumbnail klik
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 300); // match de CSS fade-duration
+}
