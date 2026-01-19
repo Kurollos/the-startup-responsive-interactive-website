@@ -2,20 +2,22 @@ Ontwerp en maak een responsive website voor een startup.
 
 De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
-## Ademruimte en inspringen
-In mijn HTML heb ik bewust gebruikgemaakt van ademruimte en consistent inspringen. Dit maakt de code overzichtelijk, makkelijker leesbaar en eenvoudiger te onderhouden.
+README – Ademruimte, Nesten en Naamgeving
+Ademruimte en inspringen
 
-Ademruimte:
-Lege regels gebruik ik om onderdelen visueel van elkaar te scheiden, zodat je ziet waar een element begint en eindigt.
+In mijn HTML heb ik bewust gebruikgemaakt van ademruimte en consistent inspringen. Dit zorgt ervoor dat mijn code overzichtelijk blijft, makkelijker te lezen is en eenvoudiger te onderhouden.
 
-Voorbeeld uit de header:
+Ademruimte
+Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
+
+Voorbeeld uit mijn header:
 
 <img src="Assets/decathlon.png" alt="decathlon" id="logo">
 
 <!-- Hamburger knop -->
 <button class="hamburger" id="hamburger">☰</button>
 
-<nav class="nav" id="nav">
+```<nav class="nav" id="nav">
     <ul>
         <li><a href="index.html">Sporten</a></li>
         <li><a href="#">Heren</a></li>
@@ -24,64 +26,48 @@ Voorbeeld uit de header:
 </nav>
 
 
-Hier zie je:
-Lege regels tussen logo, knop en navigatie
-Commentaar om onderdelen te verduidelijken
-Geen opeengepakte code
+Hier zie je dat er lege regels zijn tussen het logo, de knop en de navigatie. Daarnaast gebruik ik commentaar om de onderdelen te verduidelijken. Dit voorkomt opeengepakte code en zorgt voor rust en leesbaarheid.
 
-Inspringen:
-Inspringen laat zien welke elementen bij elkaar horen. Elk genest element springt één niveau verder in.
+Inspringen
+Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk genest element springt één niveau verder in.
 
-Voorbeeld navigatie:
+Voorbeeld uit de navigatie:
 
-<nav class="nav" id="nav">
+```<ul>
+    <li><a href="index.html">Sporten</a></li>
+    <li><a href="#">Heren</a></li>
+    <li><a href="#">Dames</a></li>
+</ul>
+
+
+Hier wordt duidelijk welke elementen genest zijn binnen de <ul>. Door inspringen is de structuur meteen zichtbaar.
+
+Ademruimte en inspringen in main en footer
+Ook in <main> en <footer> gebruik ik ademruimte en nesting om de code overzichtelijk te houden, bijvoorbeeld bij de media-gallery of footer-menu:
+
+```<ul class="media-gallerij">
+    <li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
+    <li><img src="Assets/Picture 2.png" alt="Thumbnail 2" class="thumbnail"></li>
+</ul>
+
+```<nav class="footer-menu">
     <ul>
-        <li><a href="index.html">Sporten</a></li>
-        <li><a href="#">Heren</a></li>
-        <li><a href="#">Dames</a></li>
+        <li><a href="#">Gratis retourneren binnen 365 dagen</a></li>
+        <li><a href="#">Afhalen in winkel</a></li>
     </ul>
 </nav>
 
 
-Door inspringen is direct zichtbaar dat <li> elementen onderdeel zijn van <ul>, en <ul> onderdeel is van <nav>.
-
-Ademruimte in main en footer:
-
-Ik gebruik lege regels tussen secties zoals .media-gallery en .item-image-parent
-
-In de footer zijn nav, social buttons en newsletter duidelijk gescheiden
+Door dit toe te passen blijft de HTML overzichtelijk en gemakkelijk te onderhouden.
 
 Volgorde en nesten van CSS selectors
-Structuur van CSS
 
-Mijn CSS volgt dezelfde volgorde als de HTML:
-
-Header
-
-Main / Productinformatie
-
-Buttons
-
-Tab-panes / Extra info
-
-Footer
-
-Social buttons
-
-Responsive media queries
-
-Waarom dit handig is:
-
-Sneller vinden van code die bij een bepaald onderdeel hoort
-
-CSS is overzichtelijk
-
-Voorkomt dat selectors per ongeluk overschreven worden
+In mijn CSS heb ik de selectors gestructureerd volgens de volgorde van mijn HTML. Dit betekent dat de styling van de header bovenaan staat, gevolgd door het main-gedeelte, productinformatie, buttons, tab-panes, footer, social buttons en tenslotte de responsive media queries.
 
 Voorbeeld uit de header:
 
 /* ========== HEADER ========== */
-header {
+```header {
     padding: 15px 20px;
     border-bottom: 1px solid #dddddd;
     background: #ffffff;
@@ -98,26 +84,15 @@ nav ul {
     margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 14px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #1a1a1a;
-}
-
 nav ul li a:hover {
     color: #0082c3;
 }
 
-Nesting van selectors
 
-Nesting gebruik ik om aan te geven dat een selector onderdeel is van een groter geheel:
+Nesten van selectors
+Ik gebruik nesting waar mogelijk om aan te geven dat bepaalde styling bij een groter onderdeel hoort:
 
-.nav ul {
+```.nav ul {
     display: flex;
     gap: 1em;
 }
@@ -129,28 +104,21 @@ Nesting gebruik ik om aan te geven dat een selector onderdeel is van een groter 
 }
 
 
-.nav ul hoort bij navigatie
-
-.thumb-box img hoort bij .thumb-box
+Hier zie je duidelijk dat .nav ul onderdeel is van de navigatie en .thumb-box img onderdeel is van de .thumb-box. Nesting houdt de context van een selector behouden.
 
 Nesten van media queries
-Mobile First principe
+Mijn CSS is opgebouwd volgens het Mobile First-principe: de basisstyling geldt voor mobiele schermen, en met media queries pas ik stijlen aan voor grotere schermen.
 
-Mijn CSS is Mobile First opgebouwd:
+Structuur van media queries:
 
-Basisstijl geldt voor mobiele schermen
+Mobiel (standaard): meeste styling buiten media queries
+Tablet/medium schermen: @media (min-width: 390px)
+Desktop/large schermen: @media (min-width: 769px)
+Specifieke navigatie-aanpassingen: @media (max-width: 768px)
 
-Media queries pas ik toe voor grotere schermen
+Voorbeelden:
 
-Structuur media queries
-
-Tablet: @media (min-width: 390px)
-
-Desktop: @media (min-width: 769px)
-
-Mobiele navigatie: @media (max-width: 768px)
-
-Voorbeeld tablet (min-width 390px):
+Tablet (min-width 390px):
 
 @media (min-width: 390px) {
     nav {
@@ -164,7 +132,7 @@ Voorbeeld tablet (min-width 390px):
 }
 
 
-Voorbeeld desktop (min-width 769px):
+Desktop (min-width 769px):
 
 @media (min-width: 769px) {
     section ul li img {
@@ -173,7 +141,7 @@ Voorbeeld desktop (min-width 769px):
 }
 
 
-Voorbeeld mobiel hamburger menu (max-width 768px):
+Mobiel – hamburger menu (max-width 768px):
 
 @media (max-width: 768px) {
     .hamburger {
@@ -202,72 +170,36 @@ Voorbeeld mobiel hamburger menu (max-width 768px):
 }
 
 
-Waarom nesting van media queries:
-
-Media query staat direct bij de selector die wordt aangepast
-
-Overzichtelijk en makkelijker te debuggen
+Door media queries dicht bij de originele selector te plaatsen blijft de CSS overzichtelijk en makkelijk te debuggen.
 
 Naamgeving
+
 HTML
+Ik gebruik semantische ID’s en class-namen om elementen duidelijk te benoemen.
+ID’s voor unieke elementen: id="logo", id="price"
 
-ID’s voor unieke elementen:
-
-<img src="Assets/decathlon.png" alt="decathlon" id="logo">
-<input type="search" id="site-search" name="q" placeholder="Zoeken...">
-
-
-Classes voor groepen of herbruikbare onderdelen:
-
-<section class="media-gallery">
-    <img src="Assets/Picture 5.png" alt="De vijfde Skipully foto" class="item-image-main">
-</section>
-
-<li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
+Classes voor groepen of herbruikbare onderdelen: class="thumbnail", class="item-image-main"
 
 CSS
+Classes zijn logisch en consistent genoemd, met koppelteken (-) om samengestelde woorden te scheiden:
 
-Class-namen corresponderen met HTML
-
-Samengestelde woorden gescheiden met -
-
-Unieke elementen met ID’s:
-
-.item-image-main { width: 50%; height: 400px; }
-.thumbnail.active { border-color: #007BFF; }
-.round-black-btn { background: #0082c3; color: #ffffff; }
+.item-image-main
+.round-black-btn
+.thumbnail.active
 
 JavaScript
-Variabelen en functies in camelCase
-Klassen uit CSS gebruikt in JS
+Variabelen en functies gebruik ik in camelCase, en classes corresponderen met de CSS:
+Variabelen: let prevButton, let currentIndex
+Functies: updateGallery()
+Classes uit CSS: .active, .fade-out
+Door consistente naamgeving tussen HTML, CSS en JS blijft de code overzichtelijk en onderhoudbaar.
 
-let prevButton = document.querySelector('.media-gallery-button:first-of-type');
-let nextButton = document.querySelector('.media-gallery-button:last-of-type');
-let mainImage = document.querySelector('.item-image-main');
-let thumbnails = document.querySelectorAll('.thumbnail');
-let currentIndex = 4;
+## Conclusie
 
-function updateGallery() {
-    mainImage.classList.add('fade-out');
-    // update logic
-}
-
-
-Voordeel:
-Samenhang tussen HTML, CSS en JS duidelijk
-Classes hebben dezelfde naam in alle bestanden
-Makkelijk onderhoudbaar en leesbaar
-
-Conclusie:
-In mijn project heb ik consistente naamgevingsconventies gebruikt voor HTML, CSS en JavaScript.
-
-HTML: Ik gebruik semantische ID’s en classes om elementen duidelijk te identificeren. Voorbeelden hiervan zijn id="logo" voor het Decathlon-logo en class="thumbnail" voor de kleine productafbeeldingen.
-
-CSS: Mijn classes zijn logisch genoemd en samengestelde woorden worden gescheiden met een koppelteken (-). Voorbeelden hiervan zijn .item-image-main voor de grote productafbeelding en .round-black-btn voor de bestelknop.
-
-JavaScript: In JS gebruik ik camelCase voor variabelen en functies, en ik verwijs naar de classes die ook in de CSS staan. Voorbeelden hiervan zijn currentIndex om de huidige afbeelding bij te houden, de functie updateGallery() om de mediagallery te updaten, en de class .active om de actieve thumbnail aan te geven.
-
-Door deze consistente naamgeving blijft mijn code overzichtelijk, onderhoudbaar en makkelijk te begrijpen voor anderen. De koppeling tussen HTML, CSS en JS is direct duidelijk, waardoor samenwerking en debugging eenvoudiger worden.
+HTML gebruikt semantische ID’s en classes, bijvoorbeeld id="logo" en class="thumbnail".
+CSS gebruikt logische class-namen, met koppelteken als scheiding, bijvoorbeeld .item-image-main en .round-black-btn.
+JS gebruikt camelCase voor variabelen en functies, en classes uit CSS, bijvoorbeeld currentIndex, updateGallery() en .active.
+Door deze conventies is de code leesbaar, samenhangend en gemakkelijk aan te passen of te debuggen.
 
 ## Licentie
 
