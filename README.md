@@ -2,76 +2,136 @@ Ontwerp en maak een responsive website voor een startup.
 
 De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
-README – Ademruimte, Nesten en Naamgeving
-Ademruimte en inspringen
+Ademruimte en inspringen in mijn HTML
 
 In mijn HTML heb ik bewust gebruikgemaakt van ademruimte en consistent inspringen. 
-Dit zorgt ervoor dat de code overzichtelijk blijft, makkelijker te lezen is en eenvoudiger te onderhouden.
+Dit zorgt ervoor dat mijn code overzichtelijk blijft, makkelijker te lezen is en eenvoudiger te onderhouden.
 
 Ademruimte
-Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van de pagina. 
-Hierdoor is direct zichtbaar waar een onderdeel begint en eindigt.
-<img src="Assets/decathlon.png" alt="decathlon" id="logo">
 
-<!-- Hamburger knop -->
-```<button class="hamburger" id="hamburger">☰</button>
+Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
 
+Voorbeeld uit mijn header
+<header>
+    <img src="Assets/decathlon.png" alt="decathlon" id="logo">
+
+    <!-- Hamburger knop -->
+    <button class="hamburger" id="hamburger">☰</button>
+    
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a href="index.html">Sporten</a></li>
+            <li><a href="#">Heren</a></li>
+            <li><a href="#">Dames</a></li>
+
+
+Hier heb ik:
+Lege regels tussen logo, knop en navigatie
+Commentaar om onderdelen te verduidelijken
+Geen opeengepakte code
+Dit zorgt voor rust in mijn code en maakt het sneller leesbaar.
+
+Inspringen
+Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk genest element springt één niveau verder in.
+
+Voorbeeld uit mijn navigatie
 <nav class="nav" id="nav">
     <ul>
         <li><a href="index.html">Sporten</a></li>
         <li><a href="#">Heren</a></li>
         <li><a href="#">Dames</a></li>
-    </ul>
-</nav>```
-Voorbeeld uit mijn header:
 
-Hier heb ik:
-Lege regels tussen logo, knop en navigatie
-Commentaar toegevoegd om onderdelen te verduidelijken
-Geen opeengepakte code
+
+Je ziet hier duidelijk:
+
+<ul> zit in <nav>
+<li> zit in <ul>
+<a> zit in <li>
+
+Door het inspringen is deze structuur meteen zichtbaar.
+Ademruimte en inspringen in mijn main
+
+Ik gebruik ook ademruimte tussen verschillende secties:
+
+<main>
+
+    <!-- Grote afbeelding -->
+    <section class="media-gallery">
+
+
+En binnen die secties zie je duidelijke nesting:
+
+<section class="media-gallery">
+    <img src="Assets/Picture 5.png" alt="De vijfde Skipully foto" class="item-image-main">
+
+    <ul class="media-gallerij">
+        <li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
+        <li><img src="Assets/Picture 2.png" alt="Thumbnail 2" class="thumbnail"></li>
+
+Ademruimte en inspringen in mijn footer
+
+In mijn footer heb ik meerdere onderdelen die duidelijk van elkaar gescheiden zijn:
+
+<footer class="footer">
+
+    <nav class="footer-menu">
+        <ul>
+            <li><a href="#">Gratis retourneren binnen 365 dagen</a></li>
+
+
+En ook hier weer nesting:
+
+<section class="footer-social">
+    <h3>Volg ons</h3>
+    <section class="social-buttons">
+        <a href="" class="click-button facebook">
+
+Waarom ik dit belangrijk vind
+
+Door ademruimte en inspringen toe te passen:
+Is mijn HTML overzichtelijk
+Kan ik sneller fouten vinden
+Is mijn code makkelijker aan te passen
+Kunnen anderen mijn code beter begrijpen
+Ziet mijn code er professioneler uit
+
+Conclusie
+
+Mijn HTML is opgebouwd met:
+
+Logische structuur
+Duidelijke inspringing
+Lege regels voor ademruimte
+Goed geneste elementen
+
+Dit zorgt ervoor dat mijn code leesbaar, overzichtelijk en onderhoudbaar blijft.
 
 Volgorde en nesten van CSS selectors
+1. Volgorde van CSS selectors
 
-In mijn CSS-bestand heb ik bewust gelet op de volgorde van mijn selectors en het nesten van elementen.
-Dit zorgt ervoor dat mijn code overzichtelijk blijft en dat stijlen alleen worden toegepast op de juiste onderdelen van de pagina.
+In mijn CSS heb ik de selectors in dezelfde volgorde als mijn HTML gezet. Dat betekent dat de styling van de header bovenaan staat, daarna het main-gedeelte, de productinformatie, buttons, tab-panes, footer, social buttons en de responsive media queries helemaal onderaan.
 
-Volgorde van mijn CSS
+Waarom dit handig is:
 
-Ik heb mijn CSS opgebouwd van algemeen naar specifiek.
-Dit betekent dat ik eerst algemene stijlen definieer en daarna steeds gerichter ga stylen per onderdeel.
+Je vindt sneller de code die bij een bepaald onderdeel hoort
 
-Bijvoorbeeld: ik begin met basisinstellingen die voor de hele pagina gelden:
+Het volgen van de HTML-structuur maakt de CSS overzichtelijk
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
-}
+Het voorkomt dat je per ongeluk selectors overschrijft
 
-img {
-  max-width: 100%;
-  display: block;
-}
+Voorbeeld uit mijn CSS:
 
-
-Daarna style ik grotere onderdelen zoals de header:
-
+/* ========== HEADER ========== */
 header {
   padding: 15px 20px;
   border-bottom: 1px solid #dddddd;
   background: #ffffff;
 }
 
-
-En vervolgens steeds specifiekere onderdelen, zoals knoppen, productinformatie en thumbnails.
-
-Nesten van selectors
-
-Ik gebruik geneste selectors om duidelijk te maken welke elementen bij elkaar horen.
-Zo zorg ik ervoor dat stijlen alleen gelden binnen een bepaald onderdeel.
-
-Bijvoorbeeld in mijn navigatie:
+#logo {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
 
 nav ul {
   list-style: none;
@@ -90,69 +150,162 @@ nav ul li a {
   color: #1a1a1a;
 }
 
+nav ul li a:hover {
+  color: #0082c3;
+}
 
-Hiermee geef ik aan dat:
 
-de ul in de nav zit
-de li in de ul zitten
-de a-tags in de li zitten
-Zo voorkom ik dat deze stijlen ook op andere lijsten op mijn pagina worden toegepast.
+Hier zie je dat alles van de header netjes bij elkaar staat en in logische volgorde, zoals in de HTML: <header> → <nav> → <ul> → <li> → <a>.
 
-Voorbeeld: Media gallery
-Ook bij mijn galerij gebruik ik geneste selectors:
+2. Nesten van selectors
 
-.media-gallerij {
+Ik gebruik nesting waar mogelijk (bijvoorbeeld bij .nav ul en .thumb-box img) zodat je ziet dat de styling een onderdeel is van een groter geheel.
+
+Voorbeeld:
+
+.nav ul {
   display: flex;
   gap: 1em;
+}
+
+.thumb-box img {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  background: #f5f5f5;
+}
+
+
+Hier is duidelijk dat:
+
+.nav ul onderdeel is van de navigatie
+thumb-box img onderdeel is van de .thumb-box
+Door te nesten blijft de context van een selector behouden.
+
+Volgorde en nesten van CSS selectors
+1. Volgorde van CSS selectors
+
+In mijn CSS heb ik de selectors in dezelfde volgorde als mijn HTML gezet. Dat betekent dat de styling van de header bovenaan staat, daarna het main-gedeelte, de productinformatie, buttons, tab-panes, footer, social buttons en de responsive media queries helemaal onderaan.
+
+Waarom dit handig is:
+
+Je vindt sneller de code die bij een bepaald onderdeel hoort
+
+Het volgen van de HTML-structuur maakt de CSS overzichtelijk
+
+Het voorkomt dat je per ongeluk selectors overschrijft
+
+Voorbeeld uit mijn CSS:
+
+/* ========== HEADER ========== */
+header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #dddddd;
+  background: #ffffff;
+}
+
+#logo {
+  max-width: 160px;
+  margin-bottom: 15px;
+}
+
+nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.media-gallerij li {
-  width: 20%;
+nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
 }
 
-.media-gallerij img {
-  width: 80%;
-  height: auto;
+nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
 }
 
-
-Hierdoor weet ik precies welke stijlen horen bij de container, de lijstitems en de afbeeldingen.
-Specifieke combinaties van selectors
-Soms gebruik ik meerdere classes tegelijk om heel gericht te stylen, zoals hier:
-
-.thumbnail.active {
-  border-color: #007BFF;
+nav ul li a:hover {
+  color: #0082c3;
 }
 
 
-Deze stijl geldt alleen wanneer een thumbnail actief is.
-Hierdoor heb ik meer controle over het gedrag van mijn elementen.
+Hier zie je dat alles van de header netjes bij elkaar staat en in logische volgorde, zoals in de HTML: <header> → <nav> → <ul> → <li> → <a>.
 
-Waarom ik dit zo heb gedaan
-Door mijn CSS logisch te ordenen en selectors te nesten:
-Blijft mijn code overzichtelijk
-Kan ik sneller aanpassingen maken
-Krijgen onderdelen geen verkeerde stijlen
-Is mijn code makkelijker te begrijpen
-Dit is vooral handig bij grotere pagina’s zoals mijn productpagina met veel verschillende onderdelen.
+2. Nesten van selectors
+
+Ik gebruik nesting waar mogelijk (bijvoorbeeld bij .nav ul en .thumb-box img) zodat je ziet dat de styling een onderdeel is van een groter geheel.
+
+Voorbeeld:
+
+.nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+.thumb-box img {
+  border: 1px solid #dddddd;
+  padding: 5px;
+  background: #f5f5f5;
+}
+
+
+Hier is duidelijk dat:
+.nav ul onderdeel is van de navigatie
+thumb-box img onderdeel is van de .thumb-box
+
+Door te nesten blijft de context van een selector behouden.
 
 Nesten van media queries
+1. Hoe ik mijn CSS heb opgebouwd voor Responsive Design
 
-Voor mijn Responsive Design heb ik gebruikgemaakt van media queries in CSS. Media queries zorgen ervoor dat de layout en styling van de pagina zich aanpassen aan verschillende schermgroottes, zoals mobiele telefoons, tablets en desktops.
+Mijn CSS is opgebouwd met Mobile First principe:
+De basis styling geldt voor mobiele schermen (kleine schermen)
+Daarna gebruik ik media queries om stijlen aan te passen voor grotere schermen
+Door media queries dicht bij de originele selector te plaatsen, blijft de code overzichtelijk. Dit heet “nesten van media queries”.
 
-Hoe ik mijn CSS voor Responsive Design heb opgebouwd
+2. Structuur van mijn media queries
 
-Standaard CSS eerst
-Eerst schrijf ik de algemene stijlen voor de gehele website. Dit geldt bijvoorbeeld voor fonts, kleuren, layout van de header, footer en productpagina.
+Mobiel (standaard) → de meeste styling staat buiten media queries
+Tablet/medium schermen → @media (min-width: 390px)
+Desktop/large schermen → @media (min-width: 769px)
+Specifieke navigatie-aanpassingen → @media (max-width: 768px)
+Door dit systeem kan ik makkelijk aanpassen wat er verandert bij verschillende schermgroottes zonder dat de code verspreid staat.
 
-Media queries onderaan
-Vervolgens plaats ik de media queries onderaan mijn CSS. Dit zorgt ervoor dat ze de standaardstijlen kunnen overschrijven wanneer het scherm kleiner of groter wordt.
+3. Voorbeelden uit mijn CSS
 
-Voorbeelden uit mijn CSS
-Mobiel / hamburger menu (max-width: 768px)
+a) Kleine aanpassingen voor tablets (min-width 390px)
 
-Wanneer het scherm kleiner is dan 768px, wordt het hamburger-menu zichtbaar en verdwijnt de standaard navigatie:
+@media (min-width: 390px) {
+  nav {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  nav button {
+    width: auto;
+  }
+}
+
+
+Hier pas ik de navigatie aan voor iets bredere schermen.
+
+flex-direction: row maakt de menu-items naast elkaar in plaats van onder elkaar.
+
+b) Grotere schermen (min-width 769px)
+
+@media (min-width: 769px) {
+  section ul li img {
+    width: 70%;
+  }
+}
+
+
+Thumbnails worden groter weergegeven op grotere schermen
+
+De stijlen blijven genest bij het onderdeel (section ul li img), zodat je ziet waar ze bij horen.
+
+c) Hamburger menu voor mobiel (max-width 768px)
 
 @media (max-width: 768px) {
   .hamburger {
@@ -181,38 +334,109 @@ Wanneer het scherm kleiner is dan 768px, wordt het hamburger-menu zichtbaar en v
 }
 
 
-Hiermee wordt de navigatie op mobiele schermen compact en gebruiksvriendelijk.
-Kleinere aanpassingen voor kleine tablets / kleine schermen
-Bij schermen vanaf 390px pas ik de richting van de nav-items aan:
+Hier laat ik zien dat mobiele navigatie zich aanpast:
+Hamburger knop wordt zichtbaar
+Menu-items worden verticaal gezet
+Wanneer .nav.show wordt toegevoegd (via JS), wordt het menu zichtbaar
 
-@media (min-width: 390px) {
-  nav {
-    flex-direction: row;
-    gap: 0.5rem;
-  }
+4. Waarom ik nesting van media queries gebruik
 
-  nav button {
-    width: auto;
-  }
+De media query staat bij de selector waar het bij hoort, in plaats van helemaal onderaan de CSS
+Hierdoor zie je meteen welke componenten aangepast worden op verschillende schermgroottes
+Het maakt de CSS overzichtelijk, onderhoudbaar en makkelijker te debuggen
+
+Naamgeving
+1. HTML
+
+In mijn HTML heb ik duidelijke en semantische namen gebruikt voor elementen:
+
+ID’s voor unieke elementen:
+
+<img src="Assets/decathlon.png" alt="decathlon" id="logo">
+<input type="search" id="site-search" name="q" placeholder="Zoeken...">
+
+
+Class-namen voor groepen of herbruikbare onderdelen:
+
+<section class="media-gallery">
+    <img src="Assets/Picture 5.png" alt="De vijfde Skipully foto" class="item-image-main">
+</section>
+
+<li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
+
+
+Voordelen:
+
+Semantische structuur duidelijk voor de lezer en browser
+Eenvoudig te stylen in CSS en aan te spreken in JS
+
+2. CSS
+In mijn CSS heb ik logische en consistente class- en ID-namen gebruikt die overeenkomen met de HTML.
+
+Voorbeeld:
+
+.item-image-main {
+    width: 50%;
+    height: 400px;
 }
 
-Aanpassing voor grotere schermen (desktop)
-
-Bij schermen vanaf 769px worden sommige afbeeldingen iets aangepast om de layout beter te laten passen:
-
-@media (min-width: 769px) {
-  section ul li img {
-    width: 70%;
-  }
+.thumbnail.active {
+    border-color: #007BFF;
 }
 
-Waarom ik dit zo heb gedaan
-Door media queries te nesten en onderaan de CSS te plaatsen:
+.round-black-btn {
+    background: #0082c3;
+    color: #ffffff;
+}
 
-Blijven de standaard stijlen overzichtelijk
-Zijn specifieke aanpassingen voor verschillende schermgroottes makkelijk te vinden
-Voorkom ik conflicten tussen mobiele en desktop-stijlen
-Kan de website zich netjes aanpassen aan elk apparaat
+
+Conventies die ik hanteer:
+
+Koppel CSS selectors direct aan hun betekenis/rol (.thumbnail, .round-black-btn)
+Gebruik - om samengestelde woorden te scheiden (.item-image-main)
+
+ID’s voor unieke elementen (#logo, #price)
+
+3. JavaScript
+
+In JS gebruik ik beschrijvende variabelen en functies, zodat de code leesbaar is:
+
+Variabelen:
+
+let prevButton = document.querySelector('.media-gallery-button:first-of-type');
+let nextButton = document.querySelector('.media-gallery-button:last-of-type');
+let mainImage = document.querySelector('.item-image-main');
+let thumbnails = document.querySelectorAll('.thumbnail');
+let currentIndex = 4;
+
+
+Functies:
+
+function updateGallery() {
+    mainImage.classList.add('fade-out');
+    // ... update logic ...
+}
+
+
+Conventies:
+
+Variabelen in camelCase (prevButton, currentIndex)
+Functies ook in camelCase en beschrijvend (updateGallery)\
+Klassen die in CSS gebruikt worden (active, fade-out) corresponderen met JS
+
+Voordeel:
+
+Samenhang tussen HTML, CSS en JS is duidelijk
+Je ziet direct welke classes in CSS en JS effect hebben
+
+4. Samengevat
+Bestand	Naamgevingsstijl	Voorbeeld
+HTML	Semantische IDs en classes	id="logo", class="thumbnail"
+CSS	Logische class-namen, scheiding met -	.item-image-main, .round-black-btn
+JS	CamelCase variabelen en functies, gebruik classes uit CSS	currentIndex, updateGallery(), .active
+
+Conclusie:
+Door consistente naamgeving tussen HTML, CSS en JS blijft de code overzichtelijk en onderhoudbaar. Het vergemakkelijkt ook samenwerking en debugging, omdat de rol van elk element of variabele direct duidelijk is.
 
 ## Licentie
 
