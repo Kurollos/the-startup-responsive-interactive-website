@@ -1,7 +1,3 @@
-Ontwerp en maak een responsive website voor een startup.
-
-De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
-
 README – Ademruimte, Nesten en Naamgeving
 Ademruimte en inspringen
 
@@ -17,7 +13,7 @@ Voorbeeld uit mijn header:
 <!-- Hamburger knop -->
 <button class="hamburger" id="hamburger">☰</button>
 
-```<nav class="nav" id="nav">
+<nav class="nav" id="nav">
     <ul>
         <li><a href="index.html">Sporten</a></li>
         <li><a href="#">Heren</a></li>
@@ -33,7 +29,7 @@ Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk gen
 
 Voorbeeld uit de navigatie:
 
-```<ul>
+<ul>
     <li><a href="index.html">Sporten</a></li>
     <li><a href="#">Heren</a></li>
     <li><a href="#">Dames</a></li>
@@ -45,12 +41,12 @@ Hier wordt duidelijk welke elementen genest zijn binnen de <ul>. Door inspringen
 Ademruimte en inspringen in main en footer
 Ook in <main> en <footer> gebruik ik ademruimte en nesting om de code overzichtelijk te houden, bijvoorbeeld bij de media-gallery of footer-menu:
 
-```<ul class="media-gallerij">
+<ul class="media-gallerij">
     <li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
     <li><img src="Assets/Picture 2.png" alt="Thumbnail 2" class="thumbnail"></li>
 </ul>
 
-```<nav class="footer-menu">
+<nav class="footer-menu">
     <ul>
         <li><a href="#">Gratis retourneren binnen 365 dagen</a></li>
         <li><a href="#">Afhalen in winkel</a></li>
@@ -67,7 +63,7 @@ In mijn CSS heb ik de selectors gestructureerd volgens de volgorde van mijn HTML
 Voorbeeld uit de header:
 
 /* ========== HEADER ========== */
-```header {
+header {
     padding: 15px 20px;
     border-bottom: 1px solid #dddddd;
     background: #ffffff;
@@ -92,7 +88,7 @@ nav ul li a:hover {
 Nesten van selectors
 Ik gebruik nesting waar mogelijk om aan te geven dat bepaalde styling bij een groter onderdeel hoort:
 
-```.nav ul {
+.nav ul {
     display: flex;
     gap: 1em;
 }
@@ -107,13 +103,17 @@ Ik gebruik nesting waar mogelijk om aan te geven dat bepaalde styling bij een gr
 Hier zie je duidelijk dat .nav ul onderdeel is van de navigatie en .thumb-box img onderdeel is van de .thumb-box. Nesting houdt de context van een selector behouden.
 
 Nesten van media queries
+
 Mijn CSS is opgebouwd volgens het Mobile First-principe: de basisstyling geldt voor mobiele schermen, en met media queries pas ik stijlen aan voor grotere schermen.
 
 Structuur van media queries:
 
 Mobiel (standaard): meeste styling buiten media queries
+
 Tablet/medium schermen: @media (min-width: 390px)
+
 Desktop/large schermen: @media (min-width: 769px)
+
 Specifieke navigatie-aanpassingen: @media (max-width: 768px)
 
 Voorbeelden:
@@ -176,6 +176,7 @@ Naamgeving
 
 HTML
 Ik gebruik semantische ID’s en class-namen om elementen duidelijk te benoemen.
+
 ID’s voor unieke elementen: id="logo", id="price"
 
 Classes voor groepen of herbruikbare onderdelen: class="thumbnail", class="item-image-main"
@@ -184,25 +185,28 @@ CSS
 Classes zijn logisch en consistent genoemd, met koppelteken (-) om samengestelde woorden te scheiden:
 
 .item-image-main
+
 .round-black-btn
+
 .thumbnail.active
 
 JavaScript
 Variabelen en functies gebruik ik in camelCase, en classes corresponderen met de CSS:
+
 Variabelen: let prevButton, let currentIndex
+
 Functies: updateGallery()
+
 Classes uit CSS: .active, .fade-out
+
 Door consistente naamgeving tussen HTML, CSS en JS blijft de code overzichtelijk en onderhoudbaar.
 
-## Conclusie
+Samengevat
 
 HTML gebruikt semantische ID’s en classes, bijvoorbeeld id="logo" en class="thumbnail".
+
 CSS gebruikt logische class-namen, met koppelteken als scheiding, bijvoorbeeld .item-image-main en .round-black-btn.
+
 JS gebruikt camelCase voor variabelen en functies, en classes uit CSS, bijvoorbeeld currentIndex, updateGallery() en .active.
+
 Door deze conventies is de code leesbaar, samenhangend en gemakkelijk aan te passen of te debuggen.
-
-## Licentie
-
-This project is licensed under the terms of the [MIT license](./LICENSE).
-
-
