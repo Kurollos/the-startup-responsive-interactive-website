@@ -13,7 +13,7 @@ Hierdoor is direct zichtbaar waar een onderdeel begint en eindigt.
 <img src="Assets/decathlon.png" alt="decathlon" id="logo">
 
 <!-- Hamburger knop -->
-``<button class="hamburger" id="hamburger">☰</button>
+```<button class="hamburger" id="hamburger">☰</button>
 
 <nav class="nav" id="nav">
     <ul>
@@ -21,7 +21,7 @@ Hierdoor is direct zichtbaar waar een onderdeel begint en eindigt.
         <li><a href="#">Heren</a></li>
         <li><a href="#">Dames</a></li>
     </ul>
-</nav>``
+</nav>```
 Voorbeeld uit mijn header:
 
 Hier heb ik:
