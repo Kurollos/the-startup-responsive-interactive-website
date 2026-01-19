@@ -2,9 +2,7 @@ Ontwerp en maak een responsive website voor een startup.
 
 De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
-Ademruimte en inspringen
-Ademruimte in HTML
-
+## Ademruimte en inspringen
 In mijn HTML heb ik bewust gebruikgemaakt van ademruimte en consistent inspringen. Dit maakt de code overzichtelijk, makkelijker leesbaar en eenvoudiger te onderhouden.
 
 Ademruimte:
@@ -260,14 +258,16 @@ Samenhang tussen HTML, CSS en JS duidelijk
 Classes hebben dezelfde naam in alle bestanden
 Makkelijk onderhoudbaar en leesbaar
 
-Samengevat
-Bestand	Naamgevingsstijl	Voorbeeld
-HTML	Semantische IDs en classes	id="logo", class="thumbnail"
-CSS	Logische class-namen, scheiding met -	.item-image-main, .round-black-btn
-JS	CamelCase variabelen/functies, gebruik CSS classes	currentIndex, updateGallery(), .active
-
 Conclusie:
-Door consistente naamgeving, ademruimte, inspringen en een logische CSS-structuur blijft mijn code overzichtelijk, onderhoudbaar en eenvoudig te begrijpen voor anderen.
+In mijn project heb ik consistente naamgevingsconventies gebruikt voor HTML, CSS en JavaScript.
+
+HTML: Ik gebruik semantische ID’s en classes om elementen duidelijk te identificeren. Voorbeelden hiervan zijn id="logo" voor het Decathlon-logo en class="thumbnail" voor de kleine productafbeeldingen.
+
+CSS: Mijn classes zijn logisch genoemd en samengestelde woorden worden gescheiden met een koppelteken (-). Voorbeelden hiervan zijn .item-image-main voor de grote productafbeelding en .round-black-btn voor de bestelknop.
+
+JavaScript: In JS gebruik ik camelCase voor variabelen en functies, en ik verwijs naar de classes die ook in de CSS staan. Voorbeelden hiervan zijn currentIndex om de huidige afbeelding bij te houden, de functie updateGallery() om de mediagallery te updaten, en de class .active om de actieve thumbnail aan te geven.
+
+Door deze consistente naamgeving blijft mijn code overzichtelijk, onderhoudbaar en makkelijk te begrijpen voor anderen. De koppeling tussen HTML, CSS en JS is direct duidelijk, waardoor samenwerking en debugging eenvoudiger worden.
 
 ## Licentie
 
