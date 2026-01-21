@@ -13,7 +13,7 @@ Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderde
 Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
 
 Voorbeeld uit mijn header
-https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/f86f248858e5deba8cae8e14fef39c6634d5f688/index.html#L12-L31
+
 
 
 Hier heb ik:
@@ -26,7 +26,6 @@ Inspringen
 Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk genest element springt één niveau verder in.
 
 Voorbeeld uit mijn navigatie
-https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/f86f248858e5deba8cae8e14fef39c6634d5f688/index.html#L18-L30
 Je ziet hier duidelijk:
 
 <ul> zit in <nav>
