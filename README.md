@@ -3,7 +3,6 @@ Ontwerp en maak een responsive website voor een startup.
 De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com/fdnd-task/the-startup-responsive-interactieve-website/blob/main/docs/INSTRUCTIONS.md)
 
 ## Ademruimte en inspringen in mijn HTML
-
 In mijn HTML heb ik bewust gebruikgemaakt van ademruimte en consistent inspringen. 
 Dit zorgt ervoor dat mijn code overzichtelijk blijft, makkelijker te lezen is en eenvoudiger te onderhouden.
 
@@ -11,7 +10,7 @@ Dit zorgt ervoor dat mijn code overzichtelijk blijft, makkelijker te lezen is en
 Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. 
 Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
 
-# Voorbeeld uit mijn header
+ Voorbeeld uit mijn header
 https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/index.html#L12-L31
 
 Hier heb ik:
@@ -38,7 +37,7 @@ kunnen anderen mijn code beter begrijpen en dan ziet mijn code er beter uit
 
 
 ## Volgorde en nesten van CSS selectors
- Volgorde van CSS selectors
+“Ik gebruik geneste CSS selectors om de volgorde van mijn code te laten volgen zoals de HTML, waardoor stijlen overzichtelijk en makkelijk aanpasbaar zijn.
 
 Voorbeeld uit mijn CSS:
 https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/productpagestyle.css#L1-L19
@@ -51,6 +50,7 @@ Alle stijlen die specifiek voor de navigatie gelden, kunnen hier worden gegroepe
 Zo hoef je later niet in de hele CSS te zoeken naar nav ul li a of andere subelementen.
 
 ## Nesten van media queries
+Ik gebruik geneste media queries binnen componenten voor Mobile First responsive design, zodat alle responsive aanpassingen bij het juiste component staan en onderhoud eenvoudig is.”
 
  Voorbeelden uit mijn CSS
 https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/productpagestyle.css#L33-L43
@@ -95,6 +95,32 @@ CSS: .media-gallery-button:hover – hover effect staat bij het component, naam 
 JS: currentIndex – beschrijft welke afbeelding momenteel actief is in de gallery.
 
 Door deze conventies aan te houden, blijft de code overzichtelijk, kan een andere ontwikkelaar snel begrijpen wat elk element doet, en wordt onderhoud of uitbreiding veel eenvoudiger.
+
+## WCAG Audit
+Accessibility Audit 
+
+Deze website is getest op toegankelijkheid volgens de WCAG-richtlijnen met behulp van Lighthouse en handmatige checks.
+
+Resultaten
+Score: 91% (Lighthouse Accessibility)
+Headings & Landmarks:
+Hoofdtitel: h1
+Subsecties: h2 / h3
+Landmarks <main> en <nav> aanwezig → snelle navigatie voor screenreadergebruikers.
+
+Keyboard & Interactive Elements:
+
+Navigatie met Tab werkt volledig; focus-indicatie zichtbaar (blauwe outline).
+Hover-effecten voor muisgebruik zichtbaar (rood).
+Knoppen en links duidelijk, beschrijven hun functie (bijv. “Add to Cart”).
+
+
+Conclusie
+
+De website is grotendeels toegankelijk:
+Logische heading-structuur en landmarks.
+Interactieve elementen duidelijk en focus/hover zichtbaar.
+Over het algemeen goed contrast, enkele links in de footer kunnen beter.
 
 ## Licentie
 
