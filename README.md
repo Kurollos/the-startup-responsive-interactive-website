@@ -12,6 +12,7 @@ Ademruimte
 Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
 
 Voorbeeld uit mijn header
+```HTML
 <header>
     <img src="Assets/decathlon.png" alt="decathlon" id="logo">
 
@@ -23,6 +24,7 @@ Voorbeeld uit mijn header
             <li><a href="index.html">Sporten</a></li>
             <li><a href="#">Heren</a></li>
             <li><a href="#">Dames</a></li>
+```
 
 
 Hier heb ik:
