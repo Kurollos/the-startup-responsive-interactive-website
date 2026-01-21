@@ -9,22 +9,11 @@ Dit zorgt ervoor dat mijn code overzichtelijk blijft, makkelijker te lezen is en
 
 Ademruimte
 
-Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
+Met ademruimte bedoel ik dat ik lege regels gebruik tussen verschillende onderdelen van mijn pagina. 
+Hierdoor zie je duidelijk waar een onderdeel begint en eindigt.
 
 Voorbeeld uit mijn header
-```HTML
-<header>
-    <img src="Assets/decathlon.png" alt="decathlon" id="logo">
-
-    <!-- Hamburger knop -->
-    <button class="hamburger" id="hamburger">☰</button>
-    
-    <nav class="nav" id="nav">
-        <ul>
-            <li><a href="index.html">Sporten</a></li>
-            <li><a href="#">Heren</a></li>
-            <li><a href="#">Dames</a></li>
-```
+https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/f86f248858e5deba8cae8e14fef39c6634d5f688/index.html#L12-L31
 
 
 Hier heb ik:
@@ -37,13 +26,7 @@ Inspringen
 Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk genest element springt één niveau verder in.
 
 Voorbeeld uit mijn navigatie
-<nav class="nav" id="nav">
-    <ul>
-        <li><a href="index.html">Sporten</a></li>
-        <li><a href="#">Heren</a></li>
-        <li><a href="#">Dames</a></li>
-
-
+https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/f86f248858e5deba8cae8e14fef39c6634d5f688/index.html#L18-L30
 Je ziet hier duidelijk:
 
 <ul> zit in <nav>
@@ -51,228 +34,33 @@ Je ziet hier duidelijk:
 <a> zit in <li>
 
 Door het inspringen is deze structuur meteen zichtbaar.
-Ademruimte en inspringen in mijn main
-
-Ik gebruik ook ademruimte tussen verschillende secties:
-
-<main>
-
-    <!-- Grote afbeelding -->
-    <section class="media-gallery">
-
-
-En binnen die secties zie je duidelijke nesting:
-
-<section class="media-gallery">
-    <img src="Assets/Picture 5.png" alt="De vijfde Skipully foto" class="item-image-main">
-
-    <ul class="media-gallerij">
-        <li><img src="Assets/Picture 1.png" alt="Thumbnail 1" class="thumbnail"></li>
-        <li><img src="Assets/Picture 2.png" alt="Thumbnail 2" class="thumbnail"></li>
-
-Ademruimte en inspringen in mijn footer
-
-In mijn footer heb ik meerdere onderdelen die duidelijk van elkaar gescheiden zijn:
-
-<footer class="footer">
-
-    <nav class="footer-menu">
-        <ul>
-            <li><a href="#">Gratis retourneren binnen 365 dagen</a></li>
-
-
-En ook hier weer nesting:
-
-<section class="footer-social">
-    <h3>Volg ons</h3>
-    <section class="social-buttons">
-        <a href="" class="click-button facebook">
 
 Waarom ik dit belangrijk vind
+Door ademruimte en inspringen toe te passen is mijn HTML overzichtelijk en
+kunnen anderen mijn code beter begrijpen en dan ziet mijn code er beter uit
 
-Door ademruimte en inspringen toe te passen:
-Is mijn HTML overzichtelijk
-Kan ik sneller fouten vinden
-Is mijn code makkelijker aan te passen
-Kunnen anderen mijn code beter begrijpen
-Ziet mijn code er professioneler uit
-
-Conclusie
-
-Mijn HTML is opgebouwd met:
-
-Logische structuur
-Duidelijke inspringing
-Lege regels voor ademruimte
-Goed geneste elementen
-
-Dit zorgt ervoor dat mijn code leesbaar, overzichtelijk en onderhoudbaar blijft.
 
 Volgorde en nesten van CSS selectors
 1. Volgorde van CSS selectors
 
-In mijn CSS heb ik de selectors in dezelfde volgorde als mijn HTML gezet. Dat betekent dat de styling van de header bovenaan staat, daarna het main-gedeelte, de productinformatie, buttons, tab-panes, footer, social buttons en de responsive media queries helemaal onderaan.
-
-Waarom dit handig is:
-
-Je vindt sneller de code die bij een bepaald onderdeel hoort
-
-Het volgen van de HTML-structuur maakt de CSS overzichtelijk
-
-Het voorkomt dat je per ongeluk selectors overschrijft
-
 Voorbeeld uit mijn CSS:
-
-/* ========== HEADER ========== */
-header {
-  padding: 15px 20px;
-  border-bottom: 1px solid #dddddd;
-  background: #ffffff;
-}
-
-#logo {
-  max-width: 160px;
-  margin-bottom: 15px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 14px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #1a1a1a;
-}
-
-nav ul li a:hover {
-  color: #0082c3;
-}
-
+https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/f86f248858e5deba8cae8e14fef39c6634d5f688/productpagestyle.css#L23-L8
 
 Hier zie je dat alles van de header netjes bij elkaar staat en in logische volgorde, zoals in de HTML: <header> → <nav> → <ul> → <li> → <a>.
 
-2. Nesten van selectors
-
-Ik gebruik nesting waar mogelijk (bijvoorbeeld bij .nav ul en .thumb-box img) zodat je ziet dat de styling een onderdeel is van een groter geheel.
-
-Voorbeeld:
-
-.nav ul {
-  display: flex;
-  gap: 1em;
-}
-
-.thumb-box img {
-  border: 1px solid #dddddd;
-  padding: 5px;
-  background: #f5f5f5;
-}
-
 
 Hier is duidelijk dat:
-
 .nav ul onderdeel is van de navigatie
-thumb-box img onderdeel is van de .thumb-box
 Door te nesten blijft de context van een selector behouden.
 
 Volgorde en nesten van CSS selectors
 1. Volgorde van CSS selectors
 
-In mijn CSS heb ik de selectors in dezelfde volgorde als mijn HTML gezet. Dat betekent dat de styling van de header bovenaan staat, daarna het main-gedeelte, de productinformatie, buttons, tab-panes, footer, social buttons en de responsive media queries helemaal onderaan.
-
-Waarom dit handig is:
-
-Je vindt sneller de code die bij een bepaald onderdeel hoort
-
-Het volgen van de HTML-structuur maakt de CSS overzichtelijk
-
-Het voorkomt dat je per ongeluk selectors overschrijft
-
-Voorbeeld uit mijn CSS:
-
-/* ========== HEADER ========== */
-header {
-  padding: 15px 20px;
-  border-bottom: 1px solid #dddddd;
-  background: #ffffff;
-}
-
-#logo {
-  max-width: 160px;
-  margin-bottom: 15px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 14px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #1a1a1a;
-}
-
-nav ul li a:hover {
-  color: #0082c3;
-}
-
-
-Hier zie je dat alles van de header netjes bij elkaar staat en in logische volgorde, zoals in de HTML: <header> → <nav> → <ul> → <li> → <a>.
-
-2. Nesten van selectors
-
-Ik gebruik nesting waar mogelijk (bijvoorbeeld bij .nav ul en .thumb-box img) zodat je ziet dat de styling een onderdeel is van een groter geheel.
-
-Voorbeeld:
-
-.nav ul {
-  display: flex;
-  gap: 1em;
-}
-
-.thumb-box img {
-  border: 1px solid #dddddd;
-  padding: 5px;
-  background: #f5f5f5;
-}
-
-
-Hier is duidelijk dat:
-.nav ul onderdeel is van de navigatie
-thumb-box img onderdeel is van de .thumb-box
-
-Door te nesten blijft de context van een selector behouden.
 
 Nesten van media queries
 1. Hoe ik mijn CSS heb opgebouwd voor Responsive Design
 
-Mijn CSS is opgebouwd met Mobile First principe:
-De basis styling geldt voor mobiele schermen (kleine schermen)
-Daarna gebruik ik media queries om stijlen aan te passen voor grotere schermen
-Door media queries dicht bij de originele selector te plaatsen, blijft de code overzichtelijk. Dit heet “nesten van media queries”.
 
-2. Structuur van mijn media queries
-
-Mobiel (standaard) → de meeste styling staat buiten media queries
-Tablet/medium schermen → @media (min-width: 390px)
-Desktop/large schermen → @media (min-width: 769px)
-Specifieke navigatie-aanpassingen → @media (max-width: 768px)
-Door dit systeem kan ik makkelijk aanpassen wat er verandert bij verschillende schermgroottes zonder dat de code verspreid staat.
 
 3. Voorbeelden uit mijn CSS
 
