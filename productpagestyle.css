@@ -302,7 +302,7 @@ select {
 footer {
   margin-top: 40px;
   background: #f5f5f5;
-  padding: 30px; /* let op: stond '30p' in jouw code, dat is fout */
+  padding: 30px; 
   text-align: right;
 
   @media (min-width: 32em) {
