@@ -26,9 +26,9 @@ Inspringen gebruik ik om te laten zien welke elementen bij elkaar horen. Elk gen
 https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/index.html#L18-L30
 Je ziet hier duidelijk:
 
-<ul> zit in <nav>
-<li> zit in <ul>
-<a> zit in <li>
+`<ul>` zit in `<nav>`
+`<li>` zit in `<ul>`
+`<a>` zit in `<li>`
 
 Door het inspringen is deze structuur meteen zichtbaar.
 
