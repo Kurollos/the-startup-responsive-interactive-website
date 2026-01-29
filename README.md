@@ -50,17 +50,15 @@ Alle stijlen die specifiek voor de navigatie gelden, kunnen hier worden gegroepe
 Zo hoef je later niet in de hele CSS te zoeken naar nav ul li a of andere subelementen.
 
 ## Nesten van media queries
-Ik gebruik geneste media queries binnen componenten voor Mobile First responsive design, zodat alle responsive aanpassingen bij het juiste component staan en onderhoud eenvoudig is.”
+Ik gebruik geneste media queries om responsive aanpassingen direct bij het bijbehorende element te plaatsen, zodat de CSS overzichtelijk blijft en het gedrag per schermgrootte makkelijk aan te passen is.”
 
- Voorbeelden uit mijn CSS
-https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/productpagestyle.css#L33-L43
+Voorbeelden uit mijn CSS
+https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/45af0de2fd0f1f64df7afeae78b1bcb21930f8f4/productpagestyle.css#L64-L75
 
+Deze zorgt dat het hamburger-menu op kleine schermen zichtbaar is en vanaf 768px automatisch verdwijnt.
 
 4. Waarom ik nesting van media queries gebruik
-Deze breakpoint is gekozen voor mobiel naar desktop overgang.
-Mobile First: standaard verticale navigatie voor kleine schermen (mobiel).
-Vanaf 390px verandert de layout naar horizontaal, zodat de navigatie beter past bij bredere schermen.
-Door de media query genest bij nav, staat alle responsive styling op één plek en blijft het overzichtelijk.
+Ik gebruik nesting van media queries zodat ik de responsive aanpassingen direct bij het bijbehorende element kan plaatsen. Hierdoor blijft mijn CSS overzichtelijk, duidelijk en makkelijk aan te passen.
 
 ## Naamgeving
 
