@@ -57,7 +57,7 @@ https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/45af
 
 Deze zorgt dat het hamburger-menu op kleine schermen zichtbaar is en vanaf 768px automatisch verdwijnt.
 
-4. Waarom ik nesting van media queries belangrijk vind: het houdt mijn CSS overzichtelijk en maakt het makkelijker om het gedrag van elementen op verschillende schermgroottes aan te passen.
+4. Waarom ik nesting van media queries belangrijk vind is omdat het houdt mijn CSS overzichtelijk en maakt het makkelijker om het gedrag van elementen op verschillende schermgroottes aan te passen.
 
 
 ## Naamgeving
