@@ -50,15 +50,15 @@ Alle stijlen die specifiek voor de navigatie gelden, kunnen hier worden gegroepe
 Zo hoef je later niet in de hele CSS te zoeken naar nav ul li a of andere subelementen.
 
 ## Nesten van media queries
-Ik gebruik geneste media queries om responsive aanpassingen direct bij het bijbehorende element te plaatsen, zodat de CSS overzichtelijk blijft en het gedrag per schermgrootte makkelijk aan te passen is.”
+Ik gebruik geneste media queries om het gedrag van een element aan te passen op verschillende schermgroottes, zoals mobiel, tablet en desktop, terwijl de CSS overzichtelijk en makkelijk te onderhouden blijft.”
 
 Voorbeelden uit mijn CSS
 https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/45af0de2fd0f1f64df7afeae78b1bcb21930f8f4/productpagestyle.css#L64-L75
 
 Deze zorgt dat het hamburger-menu op kleine schermen zichtbaar is en vanaf 768px automatisch verdwijnt.
 
-4. Waarom ik nesting van media queries gebruik
-Ik gebruik nesting van media queries zodat ik de responsive aanpassingen direct bij het bijbehorende element kan plaatsen. Hierdoor blijft mijn CSS overzichtelijk, duidelijk en makkelijk aan te passen.
+4. Waarom ik nesting van media queries belangrijk vind: het houdt mijn CSS overzichtelijk en maakt het makkelijker om het gedrag van elementen op verschillende schermgroottes aan te passen.
+
 
 ## Naamgeving
 
