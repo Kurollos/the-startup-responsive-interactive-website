@@ -40,14 +40,11 @@ kunnen anderen mijn code beter begrijpen en dan ziet mijn code er beter uit
 “Ik gebruik geneste CSS selectors om de volgorde van mijn code te laten volgen zoals de HTML, waardoor stijlen overzichtelijk en makkelijk aanpasbaar zijn.
 
 Voorbeeld uit mijn CSS:
-https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/17d74783f31b87df9a79d275b472f11393baa484/productpagestyle.css#L1-L19
-Het laat zien de volgorde van selectors: body, img, section/header/footer/nav 
+(https://github.com/Kurollos/the-startup-responsive-interactive-website/blob/45af0de2fd0f1f64df7afeae78b1bcb21930f8f4/productpagestyle.css#L55-L62)
+Het laat zien de volgorde van selectors: nav/li/ul/a
 en dat houd het er meer overzichtelijker en duidelijker voor de code in de site.
 
-Waarom ik voor nesten van css selectors gebruikt
-Omdat de navigatie een duidelijk afgebakend component is op de pagina.
-Alle stijlen die specifiek voor de navigatie gelden, kunnen hier worden gegroepeerd.
-Zo hoef je later niet in de hele CSS te zoeken naar nav ul li a of andere subelementen.
+Waarom ik nesting van CSS selectors belangrijk vind, is omdat het de structuur van de HTML volgt, mijn CSS overzichtelijk en makkelijk aanpasbaar maakt, en zorgt dat stijlen alleen toegepast worden op de juiste elementen zonder dat andere delen van de pagina per ongeluk beïnvloed worden.
 
 ## Nesten van media queries
 Ik gebruik geneste media queries om het gedrag van een element aan te passen op verschillende schermgroottes, zoals mobiel, tablet en desktop, terwijl de CSS overzichtelijk en makkelijk te onderhouden blijft.”
